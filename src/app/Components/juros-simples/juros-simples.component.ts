@@ -13,15 +13,11 @@ export class JurosSimplesComponent implements OnInit {
 
   ngOnInit() {}
 
-  convertTaxa() {
-    return 1 + Number(this.tx) / 100;
+  convertPorcentagem() {
+    return Number(this.tx) / 100;
   }
 
-  elevado() {
-    return this.convertTaxa() ** Number(this.time);
-  }
-
-  acumulado() {
-    return Number(this.c) * this.elevado();
+  jurosSimples() {
+    return Number(this.c) * this.convertPorcentagem() * Number(this.time);
   }
 }

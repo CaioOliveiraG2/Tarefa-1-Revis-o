@@ -1,2 +1,30 @@
-<app-juros-simples></app-juros-simples>
-<app-juros-composto></app-juros-composto>
+<app-juros></app-juros>
+
+<div
+  class="card"
+  style="width: 18rem;margin:10px; width:96% ; padding:10px;text-align: center; background-color: pink;"
+>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      [(ngModel)]="juros"
+      [value]="1"
+    />
+    <label> Juros Simples </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="radio"
+      [(ngModel)]="juros"
+      [value]="2"
+      checked
+    />
+    <label> Juros Composto </label>
+  </div>
+
+  <app-juros-simples *ngIf="juros == '1'"></app-juros-simples>
+
+  <app-juros-composto *ngIf="juros == '2'"></app-juros-composto>
+</div>
