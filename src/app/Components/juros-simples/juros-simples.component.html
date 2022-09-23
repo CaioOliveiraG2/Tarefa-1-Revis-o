@@ -1,0 +1,20 @@
+<div
+  class="card"
+  style="width: 18rem;margin:10px; width:96% ; padding:10px;text-align: center; background-color: grey;"
+>
+  <h2>Juros Simples</h2>
+  <div>
+    <label for="cn">Capital Inicial</label><br />
+    <input id="cn" [(ngModel)]="c" style="width: 100px;" /><br />
+    <strong>X</strong><br />
+    <label for="tx">Taxa de Juros</label><br />
+    <input id="tx" [(ngModel)]="tx" style="width: 100px;" /><br /><strong
+      >X</strong
+    ><br />
+    <label for="ta">Tempo da Aplicação</label><br />
+    <input id="ta" [(ngModel)]="time" style="width: 100px;" /><br /><strong
+      >=</strong
+    ><br />
+    <div class="card">{{ acumulado() }}</div>
+  </div>
+</div>
